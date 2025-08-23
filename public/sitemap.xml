@@ -2,9 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://reyn1920.github.io/base44-app/</loc></url>
   <url><loc>https://reyn1920.github.io/base44-app/#/features</loc></url>
+  <url><loc>https://reyn1920.github.io/base44-app/#/solutions</loc></url>
+  <url><loc>https://reyn1920.github.io/base44-app/#/templates</loc></url>
   <url><loc>https://reyn1920.github.io/base44-app/#/pricing</loc></url>
-  <url><loc>https://reyn1920.github.io/base44-app/#/enterprise</loc></url>
   <url><loc>https://reyn1920.github.io/base44-app/#/docs</loc></url>
-  <url><loc>https://reyn1920.github.io/base44-app/#/uikit</loc></url>
-  <url><loc>https://reyn1920.github.io/base44-app/#/youtube</loc></url>
+  <url><loc>https://reyn1920.github.io/base44-app/#/blog</loc></url>
+  <url><loc>https://reyn1920.github.io/base44-app/#/enterprise</loc></url>
+  <url><loc>https://reyn1920.github.io/base44-app/#/careers</loc></url>
+  <url><loc>https://reyn1920.github.io/base44-app/#/contact</loc></url>
 </urlset>

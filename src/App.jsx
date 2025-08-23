@@ -1,3 +1,12 @@
+import Terms from "./pages/Terms.jsx";
+import Privacy from "./pages/Privacy.jsx";
+import Contact from "./pages/Contact.jsx";
+import Careers from "./pages/Careers.jsx";
+import Blog from "./pages/Blog.jsx";
+import Templates from "./pages/Templates.jsx";
+import Solutions from "./pages/Solutions.jsx";
+import Footer from "./components/Footer.jsx";
+import Navbar from "./components/Navbar.jsx";
 import React from "react";
 import ThemeToggle from "./components/ThemeToggle.jsx";
 
@@ -15,14 +24,19 @@ function useHashRoute() {
 
 function Sidebar({ navigate, current }) {
   const links = [
-    { to: "/", label: "Home" },
-    { to: "/features", label: "Features" },
-    { to: "/pricing", label: "Pricing" },
-    { to: "/enterprise", label: "Enterprise" },
-    { to: "/docs", label: "Docs" },
-    { to: "/uikit", label: "UI Kit Demo" },
-    { to: "/youtube", label: "YouTube" }
-  ];
+  { to: "/", label: "Home" },
+  { to: "/features", label: "Features" },
+  { to: "/solutions", label: "Solutions" },
+  { to: "/templates", label: "Templates" },
+  { to: "/pricing", label: "Pricing" },
+  { to: "/docs", label: "Docs" },
+  { to: "/blog", label: "Blog" },
+  { to: "/enterprise", label: "Enterprise" },
+  { to: "/careers", label: "Careers" },
+  { to: "/contact", label: "Contact" },
+  { to: "/uikit", label: "UI Kit Demo" },
+  { to: "/youtube", label: "YouTube" }
+];
   return (
     <nav className="w-56 shrink-0 border-r bg-[hsl(var(--card))]">
       <div className="p-4 font-semibold">Base44</div>
@@ -46,6 +60,7 @@ function Sidebar({ navigate, current }) {
 function Dashboard() {
   return (
     <div className="grid gap-4">
+      <Navbar current={path} navigate={push} />
       <h2 className="text-xl font-semibold">Dashboard</h2>
       <div className="rounded-xl border bg-[hsl(var(--card))] p-4">
         <p className="text-sm text-[hsl(var(--muted-foreground))]">Quick Actions</p>
@@ -127,9 +142,14 @@ export default function App() {
         <main className="min-h-[70dvh] p-4">
           {path === "/" && <Home />}
           {path === "/features" && <Features />}
+          {path === "/solutions" && <Solutions />}
+          {path === "/templates" && <Templates />}
           {path === "/pricing" && <Pricing />}
-          {path === "/enterprise" && <Enterprise />}
           {path === "/docs" && <Docs />}
+          {path === "/blog" && <Blog />}
+          {path === "/enterprise" && <Enterprise />}
+          {path === "/careers" && <Careers />}
+          {path === "/contact" && <Contact />}
           {path === "/uikit" && <UIKit />}
           {path === "/youtube" && <YouTubePage />}
         </main>
