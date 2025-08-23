@@ -23,7 +23,14 @@ jobs:
           node-version: "20"
       - uses: actions/configure-pages@v5
       - run: npm ci || npm i
+
+      # ✅ Set the base path for Vite on GitHub Pages
+      #    /<repo-name>/  -> e.g. /base44-app/
+      - name: Set VITE_BASE for Pages
+        run: echo "VITE_BASE=/${GITHUB_REPOSITORY#*/}/" >> $GITHUB_ENV
+
       - run: npm run build
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
