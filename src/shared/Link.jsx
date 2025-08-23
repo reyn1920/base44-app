@@ -6,9 +6,5 @@ export function Link({ to = "#/", className = "", children }) {
       location.hash = to.slice(1);
     }
   };
-  return (
-    <a href={to} className={className} onClick={onClick}>
-      {children}
-    </a>
-  );
+  return <a href={to} className={className} onClick={onClick}>{children}</a>;
 }
