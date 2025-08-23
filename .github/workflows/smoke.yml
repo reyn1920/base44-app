@@ -1,0 +1,9 @@
+name: Smoke
+on:
+  push:
+    branches: [ "main" ]
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hello from actions"
