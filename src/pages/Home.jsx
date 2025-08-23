@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "../shared/Link.js";
+import { Link } from ../shared/Link.jsx;
 
 export default function Home() {
   return (
