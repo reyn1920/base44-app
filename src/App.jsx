@@ -90,6 +90,8 @@ function YouTubeFallback() {
   );
 }
 
+import YouTubePage from "./pages/YouTube.jsx";
+
 export default function App() {
   const { path, push } = useHashRoute();
   return (
@@ -111,7 +113,7 @@ export default function App() {
         <main className="min-h-[70dvh] p-4">
           {path === "/" && <Dashboard />}
           {path === "/uikit" && <UIKit />}
-          {path === "/youtube" && <YouTubeFallback />}
+          {path === "/youtube" && <YouTubePage />}
         </main>
       </div>
 
