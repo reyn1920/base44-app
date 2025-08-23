@@ -15,9 +15,13 @@ function useHashRoute() {
 
 function Sidebar({ navigate, current }) {
   const links = [
-    { to: "/", label: "Dashboard" },
+    { to: "/", label: "Home" },
+    { to: "/features", label: "Features" },
+    { to: "/pricing", label: "Pricing" },
+    { to: "/enterprise", label: "Enterprise" },
+    { to: "/docs", label: "Docs" },
     { to: "/uikit", label: "UI Kit Demo" },
-    { to: "/youtube", label: "YouTube" },
+    { to: "/youtube", label: "YouTube" }
   ];
   return (
     <nav className="w-56 shrink-0 border-r bg-card">
@@ -92,6 +96,16 @@ function YouTubeFallback() {
 
 import YouTubePage from "./pages/YouTube.jsx";
 
+import Home from "./pages/Home.jsx";
+
+import Features from "./pages/Features.jsx";
+
+import Pricing from "./pages/Pricing.jsx";
+
+import Enterprise from "./pages/Enterprise.jsx";
+
+import Docs from "./pages/Docs.jsx";
+
 export default function App() {
   const { path, push } = useHashRoute();
   return (
@@ -111,7 +125,11 @@ export default function App() {
       <div className="mx-auto grid max-w-screen-2xl grid-cols-1 md:grid-cols-[14rem_1fr]">
         <Sidebar navigate={push} current={path} />
         <main className="min-h-[70dvh] p-4">
-          {path === "/" && <Dashboard />}
+          {path === "/" && <Home />}
+          {path === "/features" && <Features />}
+          {path === "/pricing" && <Pricing />}
+          {path === "/enterprise" && <Enterprise />}
+          {path === "/docs" && <Docs />}
           {path === "/uikit" && <UIKit />}
           {path === "/youtube" && <YouTubePage />}
         </main>
