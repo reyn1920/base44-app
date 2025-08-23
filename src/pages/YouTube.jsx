@@ -19,7 +19,7 @@ export default function YouTubePage() {
     <div className="mx-auto max-w-3xl p-4">
       <h1 className="mb-4 text-xl font-semibold">YouTube Embed</h1>
       <input
-        className="w-full rounded-md border bg-background px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-ring"
+        className="w-full rounded-md border bg-[hsl(var(--background))] px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[hsl(var(--ring))]"
         placeholder="Paste a YouTube URL…"
         value={url}
         onChange={(e) => setUrl(e.target.value)}
@@ -34,7 +34,7 @@ export default function YouTubePage() {
             allowFullScreen
           />
         ) : (
-          <div className="flex h-full items-center justify-center text-sm text-muted-foreground">
+          <div className="flex h-full items-center justify-center text-sm text-[hsl(var(--muted-foreground))]">
             Enter a valid YouTube URL
           </div>
         )}

@@ -14,9 +14,9 @@ export default function Features() {
       <h1 className="text-2xl font-semibold">Features</h1>
       <div className="mt-6 grid gap-4 md:grid-cols-2">
         {items.map((x,i)=>(
-          <div key={i} className="rounded-xl border bg-card p-6">
+          <div key={i} className="rounded-xl border bg-[hsl(var(--card))] p-6">
             <div className="font-medium">{x.t}</div>
-            <div className="mt-2 text-sm text-muted-foreground">{x.d}</div>
+            <div className="mt-2 text-sm text-[hsl(var(--muted-foreground))]">{x.d}</div>
           </div>
         ))}
       </div>
